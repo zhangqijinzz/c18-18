@@ -178,6 +178,46 @@ h1 em { color: #f15a47; font-style: normal; }
 .version-swatch-row { margin-top: 11px; display: flex; align-items: center; gap: 7px; color: #9ca3ad; font-family: 'DM Mono', monospace; font-size: 8px; }
 .version-swatch-row span:nth-child(1), .version-swatch-row span:nth-child(2) { width: 13px; height: 13px; border-radius: 4px; }
 .version-swatch-row span:nth-child(3) { margin-left: auto; }
+.compare-hint { margin-top: 12px; padding: 11px 14px; color: #9a6538; background: #fff7ef; border: 1px solid #f3ddc8; border-radius: 9px; font-size: 10px; }
+.compare-panel { margin-top: 16px; padding: 16px 18px; background: #fff; border: 1px solid #e5e8eb; border-radius: 12px; }
+.compare-summary { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; padding-bottom: 14px; border-bottom: 1px solid #eef0f3; }
+.compare-summary strong { color: #f15a47; font-size: 14px; letter-spacing: -.02em; }
+.compare-summary span { color: #9aa1ab; font-size: 9px; }
+.compare-groups { margin-top: 16px; display: grid; gap: 18px; }
+.compare-group-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.compare-group-label { color: #3d4654; font-size: 11px; font-weight: 700; }
+.compare-level-note { padding: 3px 7px; color: #8b94a1; background: #f1f2f4; border-radius: 5px; font-family: 'DM Mono', monospace; font-size: 8px; }
+.compare-level-note.mismatch { color: #a36c30; background: #fff4df; }
+.compare-group-count { margin-left: auto; padding: 3px 8px; color: #93a0ae; background: #f3f5f7; border-radius: 20px; font-size: 8px; font-weight: 600; }
+.compare-group-count.changed { color: #d9503d; background: #fff1ee; }
+.compare-table { border: 1px solid #ecedf0; border-radius: 9px; overflow: hidden; }
+.compare-row { display: grid; grid-template-columns: minmax(150px, 1.3fr) minmax(0, 1fr) 34px minmax(0, 1fr); align-items: center; }
+.compare-row + .compare-row { border-top: 1px solid #f0f1f4; }
+.compare-row-head { background: #fafbfc; color: #9aa2ad; font-size: 8px; font-weight: 600; }
+.compare-row-head > span { padding: 8px 12px; }
+.compare-side { display: flex; align-items: baseline; gap: 6px; font-family: 'DM Mono', monospace; }
+.compare-side small { color: #b6bcc5; font-family: 'Manrope', sans-serif; font-weight: 500; }
+.compare-side-before { color: #a3aab4; }
+.compare-side-after { color: #d9503d; }
+.compare-arrow-col { text-align: center; color: #c3c9d1; font-size: 10px; }
+.compare-token { display: flex; align-items: center; gap: 8px; padding: 9px 12px; }
+.compare-token code { padding: 3px 6px; color: #4f5866; background: #f4f5f7; border-radius: 4px; font-family: 'DM Mono', monospace; font-size: 9px; }
+.compare-token small { color: #adb3bb; font-size: 8px; }
+.change-badge { margin-left: auto; padding: 2px 7px; border-radius: 20px; font-style: normal; font-size: 8px; font-weight: 600; }
+.badge-modified { color: #a36c30; background: #fff4df; }
+.badge-added { color: #2f8a63; background: #e7f6ef; }
+.badge-removed { color: #c0556a; background: #fdeef1; }
+.compare-value { display: flex; align-items: center; gap: 7px; padding: 9px 12px; font-family: 'DM Mono', monospace; font-size: 10px; min-width: 0; }
+.compare-value i { color: #c2c8d0; font-style: normal; }
+.value-before { color: #8f98a5; background: #fafbfc; }
+.value-after { color: #3d4654; }
+.value-swatch { width: 13px; height: 13px; flex: 0 0 auto; border-radius: 4px; box-shadow: inset 0 0 0 1px #00000014; }
+.change-removed .value-before code, .change-removed .value-before { text-decoration: line-through; text-decoration-color: #d78a98; }
+.change-added .value-before { background: #fbfdfc; }
+.change-removed .value-after { background: #fdfbfc; }
+.change-modified .value-after { background: #fffaf6; }
+.compare-nochange { padding: 12px; color: #aeb5be; text-align: center; font-size: 9px; }
+@media (max-width: 540px) { .compare-row { grid-template-columns: minmax(110px, 1.2fr) minmax(0, 1fr) 24px minmax(0, 1fr); } .compare-token { flex-wrap: wrap; gap: 5px; } .change-badge { margin-left: 0; } .compare-value, .compare-row-head > span { padding-left: 8px; padding-right: 8px; } }
 .bottom-status { max-width: 1484px; margin: 0 auto; padding: 18px 48px 24px; color: #a3aab3; border-top: 1px solid #e5e7ea; display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 9px; }
 .bottom-status span { display: inline-flex; align-items: center; gap: 7px; }
 .footer-sep { margin: 0 4px; }

@@ -89,7 +89,7 @@ export class BrandMirrorViewModel {
 
   private update(partial: Partial<Pick<BrandDocument, 'tokens' | 'theme'>>, message: string): void {
     const tokens = partial.tokens ?? this.snapshot.tokens
-    this.snapshot = this.makeSnapshot({ tokens, theme: partial.theme ?? this.snapshot.theme, versions: this.snapshot.versions }, message, 'editing')
+    this.snapshot = { ...this.makeSnapshot({ tokens, theme: partial.theme ?? this.snapshot.theme, versions: this.snapshot.versions }, message, 'editing'), compareMode: this.snapshot.compareMode }
     this.persistCurrent()
   }
 
